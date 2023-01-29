@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/alixbouloc/.oh-my-zsh"
+export ZSH="/Users/alix/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -64,12 +64,12 @@ fr() {
 autofixup() {!f() { COMMIT=$(git log --pretty=oneline | fzf | awk '{print $1}'); git commit --fixup $COMMIT; GIT_SEQUENCE_EDITOR=: git rebase --autostash --autosquash -i $COMMIT^; }; f}
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/marionbarre/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/marionbarre/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/alix/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/alix/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/alixbouloc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/alixbouloc/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/alix/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/alix/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/alixbouloc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/alixbouloc/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/alix/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/alix/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="/usr/local/opt/kubernetes-cli@1.22/bin:$PATH"
