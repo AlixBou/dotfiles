@@ -1,0 +1,69 @@
+{
+    "gitlens.gitCommands.closeOnFocusOut": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "diffEditor.renderSideBySide": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.format.enable": true,
+    "files.associations": {
+      "Fastfile": "ruby",
+      "exo7": "javascript"
+    },
+    "git.suggestSmartCommit": false,
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveshare.authenticationProvider": "GitHub",
+    "cSpell.userWords": [
+      "corticotherapy",
+      "CPART",
+      "Kubernetes",
+      "lingui",
+      "quotidien",
+      "sclerotherapy",
+      "twilio",
+      "typeorm",
+      "urgo"
+    ],
+    "[dart]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.rulers": [80],
+      "editor.selectionHighlight": false,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": false
+    },
+    "debug.javascript.autoAttachFilter": "onlyWithFlag",
+    "editor.formatOnSave": true,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "sonarlint.output.showAnalyzerLogs": true,
+    "sonarlint.output.showVerboseLogs": true,
+    "sonarlint.pathToNodeExecutable": "/Users/alixbouloc/.nvm/versions/node/v16.0.0/bin/node",
+    "gitlens.codeLens.dateFormat": "",
+    "cSpell.language": "en,fr",
+    "files.autoSave": "afterDelay",
+  
+  }
+  

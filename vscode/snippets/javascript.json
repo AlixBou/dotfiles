@@ -1,0 +1,41 @@
+{
+  "console log": {
+    "prefix": "lo",
+    "body": ["console.log('$1', $1);"]
+  },
+  "test:describe": {
+    "prefix": "jest:describe",
+    "body": ["describe('$1', () => {", "beforeEach(() => {", "jest.clearAllMocks();", " });", "  it('$2', () => {", "    $3", "  });", "});"]
+  },
+  "test:import": {
+    "prefix": "jest:import",
+    "body": ["import {$2} from '$1';", "jest.mock('$1')"]
+  },
+  "test:describe:describe": {
+    "prefix": "jest:describe:describe",
+    "body": [
+      "describe('$1', () => {",
+      "  describe('$2', () => {",
+      "    beforeEach(() => {",
+      "      jest.clearAllMocks();",
+      "    });",
+      "    it('$3', () => {",
+      "      $4;",
+      "    });",
+      "  });",
+      "});"
+    ]
+  },
+  "test:mockResolvedValueOnce": {
+    "prefix": "jest:mockResolvedValueOnce",
+    "body": ["($1 as jest.Mock).mockResolvedValueOnce($2);"]
+  },
+  "test:mockRejectedValueOnce": {
+    "prefix": "jest:mockRejectedValueOnce",
+    "body": ["($1 as jest.Mock).mockRejectedValueOnce(new Error('$2'));"]
+  },
+  "logger info": {
+    "prefix": "logger:info",
+    "body": ["import logger from '$1';\n logger.info($2)"]
+  }
+}
