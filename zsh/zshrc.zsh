@@ -28,14 +28,18 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 path=("${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools" $path)
 export ANDROID_SDK=~/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
 export PATH=~/Library/Android/sdk/tools:$PATH
 export PATH=~/Library/Android/sdk/platform-tools:$PATH
 export PATH=~/Library/Android/sdk/tools/bin:$PATH
 export PATH=~/flutter/bin:$PATH
-export JAVA_HOME=$('/usr/libexec/java_home -v 1.11')
+export PATH=/usr/local/opt/kubernetes-cli@1.22/bin:$PATH
+export PATH=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home/bin:$PATH
+
 
 # Rajoute plein de commandes trop bien pour fzf (merci Ppou)
 plugins=(... fzf-yarn ...)
+export FZF_COMPLETION_TRIGGER=","
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -47,13 +51,14 @@ f(){
   "$@" | fzf
 }
 
-  [ $# -gt 0 ] && _z "$*" && return
+
 fg() {
   git log --graph --color=always \
       --bind "ctrl-m:execute:
                 (grep -o '[a-f0-9]\{7\}' | head -1 |
                 {}
                 FZF-EOF"
+}
 
 # fr - Select commit to rebase onto
 fr() {
@@ -62,14 +67,3 @@ fr() {
 
 # autofix amend a commit in the past
 autofixup() {!f() { COMMIT=$(git log --pretty=oneline | fzf | awk '{print $1}'); git commit --fixup $COMMIT; GIT_SEQUENCE_EDITOR=: git rebase --autostash --autosquash -i $COMMIT^; }; f}
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/alix/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/alix/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/alix/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/alix/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/alix/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/alix/google-cloud-sdk/completion.zsh.inc'; fi
-
-export PATH="/usr/local/opt/kubernetes-cli@1.22/bin:$PATH"
