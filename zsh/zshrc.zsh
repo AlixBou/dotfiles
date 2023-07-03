@@ -21,20 +21,18 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+eval "$(rbenv init - zsh)"
 # User configuration
 
 export PATH="$PATH:$HOME/.rvm/bin"
-export ANDROID_HOME=/usr/local/opt/android-sdk
-path=("${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools" $path)
-export ANDROID_SDK=~/Library/Android/sdk
-export ANDROID_SDK_ROOT=$ANDROID_HOME
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
-export PATH=~/Library/Android/sdk/tools:$PATH
-export PATH=~/Library/Android/sdk/platform-tools:$PATH
-export PATH=~/Library/Android/sdk/tools/bin:$PATH
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$ANDROID_HOME/emulator:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/tools/bin:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=~/flutter/bin:$PATH
 export PATH=/usr/local/opt/kubernetes-cli@1.22/bin:$PATH
-export PATH=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home/bin:$PATH
 
 
 # Rajoute plein de commandes trop bien pour fzf (merci Ppou)
